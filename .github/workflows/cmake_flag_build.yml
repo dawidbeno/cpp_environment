@@ -47,7 +47,7 @@ jobs:
         uses: actions/checkout@v4
     
       - name: Install fmt library
-        run: sudo apt-get update && sudo apt-get install -y libfmt-dev
+        run: brew update && brew install fmt
 
       # 2. Configure the CMake project using a preset
       - name: Configure CMake
