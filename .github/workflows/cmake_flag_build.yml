@@ -56,3 +56,13 @@ jobs:
       # 3. Build the project using the build preset
       - name: Build
         run: cmake --build --preset=${{ github.event.inputs.preset || 'default' }}
+
+      # 4. upload the build artifacts
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          # The name of the artifact to be uploaded (will become the .zip file name)
+          name: greeter-app-bin
+          # The path to the file or directory you want to upload.
+          # Wildcards can be used to make this more robust!
+          path: ./build/*/GreeterApp*
