@@ -65,4 +65,4 @@ jobs:
           name: greeter-app-bin
           # The path to the file or directory you want to upload.
           # Wildcards can be used to make this more robust!
-          path: ./build/*/GreeterApp*
+          path: cmake_flag/build/*/GreeterApp*
