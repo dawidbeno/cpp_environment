@@ -27,6 +27,12 @@ on:
         options:
         - default
         - us-release
+  
+  schedule:
+    # This workflow will run every day at 2 AM UTC
+    # and at 15:30 UTC every day 
+    - cron: '0 2 * * *'
+    - cron: '30 15 * * *'
 
 # A workflow run is made up of one or more jobs
 jobs:
