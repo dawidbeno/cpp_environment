@@ -45,6 +45,9 @@ jobs:
       # 1. Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout repository
         uses: actions/checkout@v4
+    
+      - name: Install fmt library
+        run: sudo apt-get update && sudo apt-get install -y libfmt-dev
 
       # 2. Configure the CMake project using a preset
       - name: Configure CMake
