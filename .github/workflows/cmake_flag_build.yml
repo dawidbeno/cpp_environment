@@ -51,8 +51,8 @@ jobs:
 
       # 2. Configure the CMake project using a preset
       - name: Configure CMake
-        run: cmake --preset=${{ github.event.inputs.preset }}
+        run: cmake --preset=${{ github.event.inputs.preset || 'default' }}
 
       # 3. Build the project using the build preset
       - name: Build
-        run: cmake --build --preset=${{ github.event.inputs.preset }}
+        run: cmake --build --preset=${{ github.event.inputs.preset || 'default' }}
